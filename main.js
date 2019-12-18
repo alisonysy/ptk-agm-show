@@ -127,7 +127,7 @@ Plugin && gsap;
           },20)
         }
       })
-      .to('.code-wrapper',{scrollTop:253,duration:1})
+      // .to('.code-wrapper',{scrollTop:253,duration:1})
       .to('.show-7',{
         x:'-100vw',
         duration:1,
