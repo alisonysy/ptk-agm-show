@@ -1,6 +1,9 @@
 import CreateBubbles from './vendor/explode.js';
 
 !function(){
+  document.querySelectorAll('.loading').forEach(function(div){
+    div.classList.remove('loading');
+  });
   let ratTl = gsap.timeline();
   let backgroundTl = gsap.timeline();
   let ratJoggingTl = ratJogging();
@@ -365,7 +368,7 @@ import CreateBubbles from './vendor/explode.js';
       dotBackground:['url(./imgs/heart-1.svg)','url(./imgs/heart-2.svg)','url(./imgs/heart-3.svg)'],
       dotXRange:[-180,180],
       dotYRange:[-700,-300],
-      dotDisappearDuration:2
+      dotDisappearDuration:3
     });
     tl
       .from('.show-24',{...conversationDefaults})
@@ -440,7 +443,7 @@ import CreateBubbles from './vendor/explode.js';
       .from('.waving-rat-right',{rotation:60,duration:0.8},'-=0.8')
       .from(['.new-year-background','.new-year-circle'],{...conversationDefaults})
       .from(['.new-year-flower','.new-year-cloud-l','.new-year-cloud-m','.new-year-cloud-r','.new-year-lantern-1','.new-year-lantern-2'],{...conversationDefaults,stagger:0.3})
-      .to('.waving-rat',{opacity:0,duration:0.8})
+      .to('.waving-rat',{opacity:0,duration:0.8},'+=0.5')
       .to('.standing-rat',{scale:1.7,xPercent:175,y:'36vh'},'-=0.8')
       .to('.floor',{scale:0,duration:0.5},'-=1')
     return tl;

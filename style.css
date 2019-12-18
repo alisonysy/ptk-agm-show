@@ -11,6 +11,10 @@ body{
   font-family: 'Monserrat',sans-serif;
 }
 
+.loading{
+  opacity: 0;
+}
+
 .relative{
   position: relative;
 }
@@ -855,7 +859,7 @@ body{
 }
 
 .show-25-bubble-emitter{
-  bottom:0;
+  bottom:10%;
   left:45%;
   width:100px;
   height:20px;
