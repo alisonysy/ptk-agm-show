@@ -386,7 +386,7 @@ body{
 .show-10-dialog{
   bottom: 60%;
   left: 7%;
-  max-width: 200px;
+  width: 200px;
   transform: rotate(-10deg);
 }
 
@@ -397,7 +397,7 @@ body{
 .conversation-6{
   font-size: 15px;
   width:85%;
-  top:10%;
+  top:40%;
 }
 
 .show-11{
@@ -600,7 +600,7 @@ body{
 .show-17-face{
   max-width: 180px;
   left:18.5%;
-  bottom:38.5%;
+  bottom:23vh;
 }
 
 .show-17-researcher-wo-face{
@@ -611,7 +611,7 @@ body{
 
 .show-17-glass{
   max-width: 135px;
-  bottom: 42%;
+  bottom: 26vh;
   left: 20.7%;
 }
 

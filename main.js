@@ -302,7 +302,7 @@ import CreateBubbles from './vendor/explode.js';
       })
       .fromTo('.show-21-parcel-1',{scale:0,x:370,y:0},{scale:1,x:400,y:450,rotation:10,duration:2,ease:'Power3.out'},'-=2.4')
       .to('.show-21-truck',{x:-530,duration:1.5})
-      .to('.show-21-parcel-1',{y:360,ease:'bounce.out',duration:0.6})
+      .to('.show-21-parcel-1',{y:370,ease:'bounce.out',duration:0.6})
       .to(['.show-21-parcel-1'],{x:-150,duration:1.6})
       .to('.show-21-truck',{x:-1100,duration:1.6},'-=1.6')
       .to('.show-21',{...slideOutDefaults,duration:0.7},'+=1')
