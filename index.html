@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy New Year</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/prism.css">
+  </head>
+  <body>
+    <div class="backgrounds absoluted">
+      <div class="absoluted show-1">
+        <span class="absoluted conversation-1 conversation">
+          Let's walk around PITAKA to meet with these lovely members.
+        </span>
+        <img src="./imgs/dialog-box-1.svg" alt="" class="">
+      </div>
+      <div class="brandName absoluted show-2">
+        <span>PITAKA</span>
+      </div>
+      <!-- marketing dept -->
+      <div class="absoluted show-3">
+        <span class="absoluted conversation-2 conversation">
+          Our MARKETING specialists tell appealing stories and attract customers &#x1F9D9;.
+        </span>
+        <img src="./imgs/dialog-box-2.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-4">
+        <img src="./imgs/teamDesign.png" alt="" class="show-4-design">
+        <img src="./imgs/ms-mktg-bg.svg" alt="" class="absoluted show-4-bg">
+        <img src="./imgs/ms-mktg-girl.svg" alt="" class="absoluted show-4-girl">
+        <img src="./imgs/ms-mktg-ins.svg" alt="" class="absoluted show-4-ins">
+        <img src="./imgs/ms-mktg-like-1.svg" alt="" class="absoluted show-4-like-1 show-4-like">
+        <img src="./imgs/ms-mktg-like-2.svg" alt="" class="absoluted show-4-like-2 show-4-like">
+        <img src="./imgs/ms-mktg-like-3.svg" alt="" class="absoluted show-4-like-3 show-4-like">
+        <img src="./imgs/ms-mktg-like-4.svg" alt="" class="absoluted show-4-like-4 show-4-like">
+      </div>
+      <div class="absoluted show-6">
+        <span class="absoluted conversation-4 conversation">
+          Oooops! Here we are, a team of TECH geeks &#x1F469;&#x200D;&#x1F4BB;.
+        </span>
+        <img src="./imgs/dialog-box-4.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-7">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-javascript">
+import { getRawPath, cacheRawPathMeasurements, getPositionOnPath } from "./utils/paths.js";
+import { getGlobalMatrix } from "./utils/matrix.js";
+var _xProps = ["x", "translateX", "left", "marginLeft"],
+    _yProps = ["y", "translateY", "top", "marginTop"],
+    _DEG2RAD = Math.PI / 180,
+    gsap,
+    PropTween,
+    _getUnit,
+    _toArray,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _populateSegmentFromArray = function _populateSegmentFromArray(segment, values, property, mode) {
+  //mode: 0 = x but don't fill y yet, 1 = y.
+  var l = values.length,
+      si = mode,
+      i = 0;
+  for (; i &lt; l; i++) {
+    segment[si] = parseFloat(values[i][property]);
+    si += 2;
+  }
+  return segment;
+},
+            </code>
+          </pre>
+        </div>
+      </div>
+      <!-- marketing and sales center -->
+      <div class="relative show-8">
+        <img src="./imgs/ms-bg.svg" alt="" class="show-8-bg">
+        <img src="./imgs/ms-arrow.svg" alt="" class="show-8-arrow absoluted">
+        <img src="./imgs/ms-circle.svg" alt="" class="show-8-circle-right-top absoluted">
+        <img src="./imgs/ms-circle.svg" alt="" class="show-8-circle-right-bottom absoluted">
+        <img src="./imgs/ms-balloon.svg" alt="" class="show-8-balloon absoluted">
+        <img src="./imgs/ms-man.svg" alt=""  class="show-8-man absoluted">
+        <img src="./imgs/ms-circle.svg" alt="" class="show-8-circle-left absoluted">
+        <img src="./imgs/ms-laptop.svg" alt="" class="show-8-laptop absoluted">
+      </div>
+      <div class="absoluted show-9">
+        <span class="absoluted conversation-5 conversation">
+          Welcome to our Marketing &amp; Sales Center.
+        </span>
+        <img src="./imgs/dialog-box-5.svg" alt="" class="">
+      </div>
+      <!-- dept of sales -->
+      <div class="absoluted show-10">
+        <img src="./imgs/ms-sales-bg.svg" alt="" class="show-10-bg">
+        <img src="./imgs/ms-sales-gear.svg" alt="" class="absoluted show-10-gear-1 show-10-gear">
+        <img src="./imgs/ms-sales-gear.svg" alt="" class="absoluted show-10-gear-2 show-10-gear">
+        <img src="./imgs/ms-sales-gear.svg" alt="" class="absoluted show-10-gear-3 show-10-gear">
+        <img src="./imgs/ms-sales-laptop.svg" alt="" class="absoluted show-10-laptop">
+        <img src="./imgs/ms-sales-customer-1.svg" alt="" class="absoluted show-10-customer-1 show-10-customer">
+        <img src="./imgs/ms-sales-customer-2.svg" alt="" class="absoluted show-10-customer-2 show-10-customer">
+        <img src="./imgs/ms-sales-customer-3.svg" alt="" class="absoluted show-10-customer-3 show-10-customer">
+        <img src="./imgs/ms-sales-customer-4.svg" alt="" class="absoluted show-10-customer-4 show-10-customer">
+        <img src="./imgs/ms-sales-amazon.svg" alt="" class="absoluted show-10-amazon">
+        <img src="./imgs/ms-sales-distributor.svg" alt="" class="absoluted show-10-distributor">
+        <img src="./imgs/ms-sales-sp.svg" alt="" class="absoluted show-10-sp">
+        <div class="absoluted show-10-dialog">
+          <span class="conversation-6 conversation absoluted">
+            Hi Distributors, ...
+          </span>
+          <img src="./imgs/dialog-box-1.svg" alt="">
+        </div>
+      </div>
+      <div class="absoluted show-11">
+        <span class="absoluted conversation-7 conversation">
+          Our SALES team works day and night to generate revenue &#x1F911;.
+        </span>
+        <img src="./imgs/dialog-box-2.svg" alt="" class="">
+      </div>
+      <!-- customer service dept -->
+      <div class="absoluted show-12">
+        <span class="absoluted conversation-8 conversation">
+          Our girls in CUSTOMER SERVICE provide warm and prompt help to customers &#x1F60A;.
+        </span>
+        <img src="./imgs/dialog-box-1.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-13">
+        <img src="./imgs/ms-cs-girl.svg" alt="" class="absoluted show-13-girl">
+        <img src="./imgs/ms-cs-desk.svg" alt="" class="absoluted show-13-desk">
+        <img src="./imgs/ms-cs-plant.svg" alt="" class="absoluted show-13-plant">
+        <img src="./imgs/ms-cs-call.svg" alt="" class="absoluted show-13-call">
+        <img src="./imgs/ms-cs-dialog.svg" alt="" class="absoluted show-13-dialog-1">
+        <img src="./imgs/ms-cs-dialog.svg" alt="" class="absoluted show-13-dialog-2">
+      </div>
+      <!-- quality dept -->
+      <div class="absoluted show-14">
+        <span class="absoluted conversation-9 conversation">
+          QUALITY engineers ensure our products are up to expectations &#x1F929;.
+        </span>
+        <img src="./imgs/dialog-box-3.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-15">
+        <div class="show-15-man absoluted">
+          <img src="./imgs/quality-left-hand.svg" alt="" class="absoluted show-15-left-hand">
+          <img src="./imgs/quality-right-hand.svg" alt="" class="absoluted show-15-right-hand">
+          <img src="./imgs/quality-man-body.svg" alt="" class="absoluted show-15-body">
+        </div>
+        <div class="show-15-stars absoluted">
+          <img src="./imgs/quality-star.svg" alt="" class="absoluted show-15-star-1 show-15-star">
+          <img src="./imgs/quality-star.svg" alt="" class="absoluted show-15-star-2 show-15-star">
+          <img src="./imgs/quality-star.svg" alt="" class="absoluted show-15-star-3 show-15-star">
+          <img src="./imgs/quality-star.svg" alt="" class="absoluted show-15-star-4 show-15-star">
+          <img src="./imgs/quality-star.svg" alt="" class="absoluted show-15-star-5 show-15-star">
+        </div>
+        <img src="./imgs/quality-good-badge.svg" alt="" class="absoluted show-15-badge">
+      </div>
+      <!-- R&D dept -->
+      <div class="absoluted show-16">
+        <span class="absoluted conversation-10 conversation">
+          R&D department forms the core of our products &#x1F468;&#x200D;&#x1F52C;.
+        </span>
+        <img src="./imgs/dialog-box-4.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-17">
+        <div class="show-17-researcher absoluted">
+          <img src="./imgs/rd-face.svg" alt="" class="absoluted show-17-face-pale show-17-face"> 
+          <img src="./imgs/rd-face-red.svg" alt="" class="absoluted show-17-face-red show-17-face">
+          <img src="./imgs/rd-face-dark.svg" alt="" class="absoluted show-17-face-dark show-17-face">
+          <img src="./imgs/rd-researcher-wo-face.svg" alt="" class="absoluted show-17-researcher-wo-face">
+          <img src="./imgs/rd-glasses.svg" alt="" class="absoluted show-17-glass">
+          <span class="absoluted show-17-bubble-emitter"></span>
+        </div>
+        <div class="show-17-products absoluted">
+          <img src="./imgs/17-magmount-qi.png" alt="" class="show-17-product">
+          <img src="./imgs/17-air-case.png" alt="" class="show-17-product">
+          <img src="./imgs/17-air-pal.png" alt="" class="show-17-product">
+        </div>
+      </div>
+      <!-- HR dept -->
+      <div class="absoluted show-18">
+        <span class="absoluted conversation-11 conversation">
+          HRs manage the core asset of our company - human capital &#x1F44F;.
+        </span>
+        <img src="./imgs/dialog-box-2.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-19">
+        <img src="./imgs/hr-card-1.svg" alt="" class="show-19-card-1 absoluted">
+        <img src="./imgs/hr-card-2.svg" alt="" class="show-19-card-2 absoluted">
+        <img src="./imgs/hr-card-3.svg" alt="" class="show-19-card-3 absoluted">  
+        <img src="./imgs/hr-lady.svg" alt="" class="show-19-lady absoluted">
+        <img src="./imgs/hr-man.svg" alt="" class="show-19-man absoluted">
+      </div>
+      <!-- Supply Chain dept -->
+      <div class="absoluted show-20">
+        <span class="absoluted conversation-12 conversation">
+          Supply Chain department manages the flow of material as well as final products &#x1F4E6;.
+        </span>
+        <img src="./imgs/dialog-box-1.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-21">
+        <img src="./imgs/supply-chain-warehouse.svg" alt="" class="absoluted show-21-warehouse">
+        <img src="./imgs/supply-chain-parcel-1.svg" alt="" class="absoluted show-21-parcel show-21-parcel-1">
+        <img src="./imgs/supply-chain-shelf.svg" alt="" class="absoluted show-21-shelf">
+        <img src="./imgs/supply-chain-parcel-2.svg" alt="" class="absoluted show-21-parcel show-21-parcel-2">
+        <img src="./imgs/supply-chain-plane.svg" alt="" class="absoluted show-21-plane">
+        <img src="./imgs/supply-chain-truck.svg" alt="" class="absoluted show-21-truck">
+      </div>
+      <!-- Finance dept -->
+      <div class="absoluted show-22">
+        <span class="absoluted conversation-13 conversation">
+          Finance department manages what we are most concerned about &#x1F4B0;.
+        </span>
+        <img src="./imgs/dialog-box-3.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-23">
+        <img src="./imgs/finance-man-w-knees-bent.svg" alt="" class="absoluted show-23-knee-bent">
+        <img src="./imgs/finance-man-w-cash.svg" alt="" class="absoluted show-23-man-w-cash">
+        <img src="./imgs/finance-cash.svg" alt="" class="absoluted show-23-cash-1 show-23-cash">
+        <img src="./imgs/finance-cash-flip.svg" alt="" class="absoluted show-23-cash-2 show-23-cash">
+        <img src="./imgs/finance-cash-flip.svg" alt="" class="absoluted show-23-cash-3 show-23-cash">
+        <img src="./imgs/finance-cash.svg" alt="" class="absoluted show-23-cash-4 show-23-cash">
+        <img src="./imgs/finance-coins.svg" alt="" class="absoluted show-23-coins-1">
+        <img src="./imgs/finance-coins.svg" alt="" class="absoluted show-23-coins-2">
+      </div>
+      <!-- boss -->
+      <div class="absoluted show-24">
+        <span class="absoluted conversation-14 conversation">
+          Here comes our big boss &#x1F451;.
+        </span>
+        <img src="./imgs/dialog-box-2.svg" alt="" class="">
+      </div>
+      <div class="absoluted show-25">
+        <span class="absoluted show-25-bubble-emitter"></span>
+        <img src="./imgs/boss-desk.svg" alt="" class="absoluted show-25-desk">
+        <img src="./imgs/boss-char.svg" alt="" class="absoluted show-25-boss">
+      </div>
+    </div>
+    <div class="floor absoluted"></div>
+
+    <div class="running-rat relative">
+      <img src="./imgs/mice-1.svg" alt="" class="absoluted rat-item rat-1">
+      <img src="./imgs/mice-2.svg" alt="" class="absoluted rat-item rat-2">
+      <img src="./imgs/mice-3.svg" alt="" class="absoluted rat-item rat-3">
+      <img src="./imgs/mice-4.svg" alt="" class="absoluted rat-item rat-4">
+      <img src="./imgs/mice-5.svg" alt="" class="absoluted rat-item rat-5">
+      <img src="./imgs/mice-6.svg" alt="" class="absoluted rat-item rat-6">
+    </div>
+    <div class="standing-rat relative">
+      <img src="./imgs/ny-mouse-hand-left.svg" alt="" class="absoluted waving-rat waving-rat-left">
+      <img src="./imgs/ny-mouse-hand-right.svg" alt="" class="absoluted waving-rat waving-rat-right">
+      <img src="./imgs/ny-mouse-body.svg" alt="" class="absoluted waving-rat waving-rat-body">
+      <img src="./imgs/ny-txt-circle.svg" alt="" class="absoluted new-year-circle new-year-paper">
+      <img src="./imgs/ny-txt-bg.svg" alt="" class="absoluted new-year-background new-year-paper">
+      <img src="./imgs/ny-txt-flower.svg" alt="" class="absoluted new-year-flower new-year-paper">
+      <img src="./imgs/ny-txt-cloud-l.svg" alt="" class="absoluted new-year-cloud-l new-year-paper">
+      <img src="./imgs/ny-txt-cloud-m.svg" alt="" class="absoluted new-year-cloud-m new-year-paper">
+      <img src="./imgs/ny-txt-cloud-r.svg" alt="" class="absoluted new-year-cloud-r new-year-paper">
+      <img src="./imgs/ny-txt-lantern-1.svg" alt="" class="absoluted new-year-lantern-1 new-year-paper">
+      <img src="./imgs/ny-txt-lantern-2.svg" alt="" class="absoluted new-year-lantern-2 new-year-paper">
+    </div>
+    <script src="./vendor/gsap.min.js"></script>
+    <script src="./vendor/MotionPathPlugin.min.js"></script>
+    <script src="./vendor/prism.js"></script>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

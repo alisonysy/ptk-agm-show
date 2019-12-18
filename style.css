@@ -1,0 +1,935 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+}
+
+body{
+  width:100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Monserrat',sans-serif;
+}
+
+.relative{
+  position: relative;
+}
+
+.absoluted{
+  position: absolute;
+}
+
+.backgrounds{
+  width:100%;
+  height:100%;
+}
+
+.floor{
+  bottom:0;
+  width: 100%;
+  height:25vh;
+  /* border-top: 3px solid #000; */
+  background: #9b2a1b;
+  box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.5);
+}
+
+.running-rat{
+  top:80vh;
+  bottom:0;
+  left:20%;
+}
+
+.rat-item{
+  max-width:40vh;
+  height:auto;
+  bottom:0;
+}
+
+.rat-item:not(.rat-1){
+  opacity:0;
+}
+
+.conversation{
+  line-height: 1.5;
+  font-size: 22px;
+  width: 70%;
+  font-weight: 800;
+}
+
+
+/* opening */
+.show-1{
+  max-width: 300px;
+  transform: rotate(15deg);
+  left: 30%;
+  top: 5vh;
+  width:100%;
+}
+
+
+.conversation-1{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-60%);
+}
+
+.brandName{
+  /* position: absolute; */
+  width:30vw;
+  height:15vh;
+  background:#000;
+  color:#fff;
+  text-align: center;
+  border-radius: 20px;
+  top:20vh;
+  left:50%;
+  overflow: hidden;
+}
+
+.brandName::before{
+  content:'';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-10em, 25em);
+  /* z-index: -99; */
+}
+
+.brandName.shine::before {
+  animation: sheen 1s forwards;
+}
+
+@keyframes sheen{
+  100%{
+    transform: rotateZ(60deg) translate(1em, -28em);
+  }
+}
+
+.brandName span{
+  height:100%;
+  line-height: 15vh;
+  font-size: 60px;
+  font-family: 'Montserrat';
+  letter-spacing: 8px;
+}
+
+/* departments */
+
+/* team desgin */
+.show-3{
+  max-width: 350px;
+  transform: rotate(-10deg);
+  left: 10%;
+  top: 5vh;
+  width:100%;
+}
+
+.conversation-2{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-60%);
+}
+
+.show-4{
+  left:40%;
+  top:5vh;
+}
+
+.show-4-bg{
+  width:100%;
+  left: 0;
+  top:20%;
+}
+
+.show-4-girl{
+  left:40%;
+  bottom:0;
+  max-width: 200px;
+}
+
+.show-4-ins{
+  left:30%;
+  bottom:0;
+  max-width: 400px;
+}
+
+.show-4-like-1{
+  max-width: 100px;
+  right:20%;
+  top:50%;
+}
+
+.show-4-like-2{
+  max-width: 120px;
+  left:20%;
+  top:30%;
+}
+
+.show-4-like-3{
+  max-width: 80px;
+  right:18%;
+  top:10%;
+}
+
+.show-4-like-4{
+  max-width: 90px;
+  left:18%;
+  bottom:5%;
+}
+
+.show-5{
+  max-width: 350px;
+  transform: rotate(-10deg);
+  left: 10%;
+  top: 5vh;
+  width:100%;
+}
+
+.conversation-3{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-60%);
+}
+
+/* dept tech */
+.show-6{
+  max-width: 250px;
+  transform: rotate(10deg);
+  left: 35%;
+  top: 5vh;
+  width:100%;
+}
+
+.conversation-4{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.show-7{
+  padding:1em;
+  left:40%;
+  top:5vh;
+  background:#d0c3aa;
+  border-radius: 12px;
+  /* box-shadow: 1px 3px 4px 1px rgba(0,0,0,0.3); */
+}
+
+.code-wrapper{
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+/* marketing and sales center */
+.show-8{
+  left: 40%;
+  top: 10vh;
+  width: 45vw;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.show-8-laptop{
+  max-width: 350px;
+  left: 30%;
+  bottom:0;
+}
+
+.show-8-arrow{
+  max-width: 600px;
+  left: 5%;
+  top: 6%;
+}
+
+.show-8-balloon{
+  max-width: 100px;
+  left:5%;
+  bottom:5%;
+}
+
+.show-8-bg{
+  width:100%;
+  /* height:100%; */
+  opacity: 0.8;
+}
+
+.show-8-man{
+  max-width: 280px;
+  left:15%;
+  bottom:0;
+}
+
+.show-8-circle-left{
+  left:8%;
+  bottom:0;
+  max-width: 100px;
+}
+
+.show-8-circle-right-top{
+  left: 67%;
+  top: -3%;
+  max-width: 120px;
+}
+
+.show-8-circle-right-bottom{
+  left: 67%;
+  top: 27%;
+  max-width: 100px;
+}
+
+.show-9{
+  max-width: 350px;
+  left: 30%;
+  top: 5vh;
+  width:100%;
+}
+
+.conversation-5{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+/* dept of sales */
+.show-10{
+  left: 40%;
+  top: 10vh;
+  width: 45vw;
+  height: 65vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.show-10-bg{
+  height:100%;
+}
+
+.show-10-gear{
+  max-width: 100px;
+}
+
+.show-10-gear.active{
+  animation: gearRotation 2s linear infinite;
+}
+
+@keyframes gearRotation{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.show-10-gear-1{
+  left:0%;
+  bottom:45%;
+}
+.show-10-gear-2{
+  right:15%;
+  top:15%;
+}
+.show-10-gear-3{
+  left:55%;
+  top:0%;
+}
+
+.show-10-laptop{
+  bottom:0;
+  left:25%;
+  max-width: 500px;
+}
+
+.show-10-customer{
+  bottom: 25.7%;
+  max-width: 100px;
+}
+
+.show-10-customer-1{
+  left: 30%;
+}
+
+.show-10-customer-2{
+  left:43%;
+}
+
+.show-10-customer-3{
+  left: 56%;
+}
+
+.show-10-customer-4{
+  left: 68%;
+}
+
+.show-10-amazon{
+  bottom: 30%;
+  left: 43%;
+  max-width: 180px;
+}
+
+.show-10-distributor{
+  bottom:26%;
+  left: 40%;
+  max-width: 250px;
+}
+
+.show-10-sp{
+  bottom:0;
+  left:15%;
+  max-width: 160px;
+}
+
+.show-10-dialog{
+  bottom: 60%;
+  left: 7%;
+  max-width: 200px;
+  transform: rotate(-10deg);
+}
+
+.show-10-dialog img{
+  width:100%;
+}
+
+.conversation-6{
+  font-size: 15px;
+  width:85%;
+  top:10%;
+}
+
+.show-11{
+  max-width: 300px;
+  left:10%;
+  top:5vh;
+  width:100%;
+
+}
+
+.conversation-7{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+/* customer service */
+.show-12{
+  width:100%;
+  max-width: 350px;
+  top:0%;
+  left:28%;
+  transform: rotate(5deg);
+}
+
+.conversation-8{
+  left:50%;
+  top:40%;
+  transform: translate(-50%,-50%);
+}
+
+.show-13{
+  left: 40%;
+  top: 10vh;
+  width: 45vw;
+  height: 65vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.show-13-girl{
+  max-width: 200px;
+  top:30%;
+  left:30%;
+}
+
+.show-13-desk{
+  max-width: 400px;
+  bottom: 3%;
+  left: 22%;
+}
+
+.show-13-plant{
+  max-width: 80px;
+  bottom:3%;
+  left:18%;
+}
+
+.show-13-call{
+  max-width: 200px;
+  right:15%;
+  top:20%;
+}
+
+.show-13-dialog-1{
+  max-width: 200px;
+  right:30%;
+  top:10%;
+}
+
+.show-13-dialog-2{
+  max-width: 200px;
+  right:32%;
+  top:23%;
+  transform: rotateY(180deg);
+}
+
+/* quality dept */
+.show-14{
+  width:100%;
+  max-width: 350px;
+  top:5%;
+  left:28%;
+  transform: rotate(5deg);
+}
+
+.conversation-9{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.show-15{
+  left: 40%;
+  top: 10vh;
+  width: 55vw;
+  height: 65vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.show-15-man{
+  max-width: 160px;
+  bottom:0;
+  left:10%;
+  width:100%;
+  height: 100%;
+}
+
+.show-15-body{
+  left: 0;
+  bottom:0;
+}
+
+.show-15-left-hand{
+  max-width: 100px;
+  left:-50%;
+  bottom:30%;
+  transform: rotate(-15deg);
+  transform-origin: right;
+}
+
+.show-15-right-hand{
+  max-width: 100px;
+  right:-50%;
+  bottom:30%;
+  transform: rotate(15deg);
+  transform-origin: left;
+}
+
+.show-15-stars{
+  width:100%;
+  height:50%;
+  left:10%;
+  top:0;
+}
+
+.show-15-star{
+  max-width: 160px;
+  top: 10%;
+}
+
+.show-15-star-1{
+  left:0;
+}
+.show-15-star-2{
+  left:16%;
+}
+.show-15-star-3{
+  left:32%;
+}
+.show-15-star-4{
+  left:48%;
+}
+.show-15-star-5{
+  left:64%;
+}
+
+.show-15-badge{
+  bottom:5%;
+  left:30%;
+  max-width: 300px;
+}
+
+/* R&D dept */
+.show-16{
+  width:100%;
+  max-width: 280px;
+  top:5%;
+  left:28%;
+  transform: rotate(-5deg);
+}
+
+.conversation-10{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.dot {
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /*performance optimization*/
+}
+
+.show-17{
+  left: 40%;
+  top: 10vh;
+  width: 55vw;
+  height: 65vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.show-17-researcher{
+  width:100%;
+  height:100%;
+}
+
+.show-17-face{
+  max-width: 180px;
+  left:18.5%;
+  bottom:38.5%;
+}
+
+.show-17-researcher-wo-face{
+  max-width: 200px;
+  left:17%;
+  bottom:0;
+}
+
+.show-17-glass{
+  max-width: 135px;
+  bottom: 42%;
+  left: 20.7%;
+}
+
+.show-17-bubble-emitter{
+  height:15px;
+  width:15px;
+  left: 32.5%;
+  bottom: 32%;
+}
+
+.show-17-products{
+  width:100%;
+  height:50%;
+  top:0;
+  left:0;
+}
+
+.show-17-product{
+  max-width: 150px;
+  left:10%;
+}
+
+.show-17-product:nth-of-type(2){
+  max-width: 80px;
+}
+
+/* human resources */
+.show-18{
+  width:100%;
+  max-width: 300px;
+  top:5%;
+  left:17%;
+  transform: rotate(-5deg);
+}
+
+.conversation-11{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.show-19{
+  left: 40%;
+  top: 10vh;
+  width: 55vw;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.show-19-lady{
+  max-width: 200px;
+  bottom:8%;
+  left:10%;
+}
+
+.show-19-man{
+  max-width: 200px;
+  bottom:0;
+  left:25%;
+}
+
+.show-19-card-1{
+  left:14%;
+  top:0;
+  max-width: 150px;
+}
+.show-19-card-2{
+  left:36%;
+  top:5%;
+  max-width: 130px;
+}
+.show-19-card-3{
+  right:30%;
+  top:3%;
+  max-width: 200px;
+}
+
+/* Supply chain */
+.show-20{
+  width:100%;
+  max-width: 360px;
+  top:0%;
+  left:12%;
+  transform: rotate(-10deg);
+}
+
+.conversation-12{
+  left:50%;
+  top:40%;
+  transform: translate(-50%,-50%);
+}
+
+.show-21{
+  left: 40%;
+  top: 10vh;
+  width: 55vw;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.show-21-plane{
+  left:0;
+  max-width: 150px;
+  top:20%;
+}
+
+.show-21-truck{
+  max-width: 160px;
+  bottom:0;
+  right:0;
+}
+
+.show-21-parcel-1{
+  max-width: 100px;
+  top:5%;
+}
+
+.show-21-parcel-2{
+  max-width: 150px;
+  bottom: 13%;
+  left: 32%;
+}
+
+.show-21-shelf{
+  bottom:0;
+  max-width: 420px;
+  left:10%;
+}
+
+.show-21-warehouse{
+  bottom: 0;
+  max-width: 600px;
+  left:0;
+}
+
+/* finance dept */
+.show-22{
+  width:100%;
+  max-width: 360px;
+  top:0%;
+  left:12%;
+  transform: rotate(-10deg);
+}
+
+.conversation-13{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.show-23{
+  left: 40%;
+  top: 10vh;
+  width: 55vw;
+  height: 65vh;
+  overflow: visible;
+  z-index: 99;
+}
+
+.show-23-knee-bent{
+  max-width: 350px;
+  bottom:-10px;
+  left:30%;
+}
+
+.show-23-man-w-cash{
+  max-width: 350px;
+  bottom:-10px;
+  left:30%;
+  opacity: 0;
+}
+
+.show-23-cash-1{
+  max-width: 80px;
+  left:28%;
+  top:50%;
+  opacity: 0;
+}
+
+.show-23-cash-2{
+  max-width: 80px;
+  right:35%;
+  top:50%;
+  opacity: 0;
+}
+
+.show-23-cash-3{
+  max-width: 80px;
+  left:28%;
+  top:50%;
+  opacity: 0;
+}
+.show-23-cash-4{
+  max-width: 80px;
+  right:35%;
+  top:50%;
+  opacity: 0;
+}
+
+.show-23-coins-1{
+  bottom:-7%;
+  right:26%;
+  max-width: 140px;
+}
+.show-23-coins-2{
+  bottom:-7%;
+  left:26%;
+  max-width: 140px;
+}
+
+/* boss */
+.show-24{
+  width:100%;
+  max-width: 360px;
+  top:0%;
+  left:12%;
+  transform: rotate(-10deg);
+}
+
+.conversation-14{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.show-25{
+  left: 40%;
+  top: 10vh;
+  width: 55vw;
+  height: 65vh;
+  overflow: visible;
+  z-index: 5001;
+}
+
+.show-25-desk{
+  left:30%;
+  bottom:-15%;
+  max-width: 400px;
+}
+
+.show-25-boss{
+  left:39%;
+  bottom:25%;
+  max-width: 200px;
+}
+
+.show-25-bubble-emitter{
+  bottom:0;
+  left:45%;
+  width:100px;
+  height:20px;
+}
+
+/* new year rat */
+.standing-rat{
+  max-width: 300px;
+  height:auto;
+  top: 40vh;
+  left: 45vw;
+  opacity:0;
+}
+
+.waving-rat-right{
+  max-width: 100px;
+  right: 1%;
+  top: 70px;
+  transform-origin: 0 90%;
+}
+
+.waving-rat-left{
+  max-width: 140px;
+  left: 13px;
+  top: 175px;
+  transform-origin: 100% 0%;
+}
+
+.new-year-background{
+  width: 400px;
+  top: -40vh;
+  left: -120%;
+}
+
+.new-year-circle{
+  width: 415px;
+  top: -34vh;
+  left: -130%;
+}
+
+.new-year-flower{
+  width:200px;
+  top: -38vh;
+  right: 95%;
+}
+
+.new-year-cloud-l{
+  max-width: 200px;
+  top:-5vh;
+  left:-145%;
+}
+
+.new-year-cloud-m{
+  max-width: 280px;
+  top:0;
+  left:-113%;
+}
+
+.new-year-cloud-r{
+  max-width: 150px;
+  right:90%;
+  top:-3vh;
+}
+
+.new-year-lantern-1{
+  max-width: 85px;
+  top:-60vh;
+  left:-100%;
+  transform-origin: top;
+}
+
+.new-year-lantern-2{
+  max-width: 120px;
+  top:-45vh;
+  left:-150%;
+  transform-origin: top;
+}
