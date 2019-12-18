@@ -36,6 +36,7 @@
         <img src="./imgs/ms-mktg-like-3.svg" alt="" class="absoluted show-4-like-3 show-4-like">
         <img src="./imgs/ms-mktg-like-4.svg" alt="" class="absoluted show-4-like-4 show-4-like">
       </div>
+      <!-- tech dept -->
       <div class="absoluted show-6">
         <span class="absoluted conversation-4 conversation">
           Oooops! Here we are, a team of TECH geeks &#x1F469;&#x200D;&#x1F4BB;.
@@ -45,31 +46,6 @@
       <div class="absoluted show-7">
         <div class="code-wrapper">
           <pre>
-            <code class="language-javascript">
-import { getRawPath, cacheRawPathMeasurements, getPositionOnPath } from "./utils/paths.js";
-import { getGlobalMatrix } from "./utils/matrix.js";
-var _xProps = ["x", "translateX", "left", "marginLeft"],
-    _yProps = ["y", "translateY", "top", "marginTop"],
-    _DEG2RAD = Math.PI / 180,
-    gsap,
-    PropTween,
-    _getUnit,
-    _toArray,
-    _getGSAP = function _getGSAP() {
-  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
-},
-    _populateSegmentFromArray = function _populateSegmentFromArray(segment, values, property, mode) {
-  //mode: 0 = x but don't fill y yet, 1 = y.
-  var l = values.length,
-      si = mode,
-      i = 0;
-  for (; i &lt; l; i++) {
-    segment[si] = parseFloat(values[i][property]);
-    si += 2;
-  }
-  return segment;
-},
-            </code>
           </pre>
         </div>
       </div>

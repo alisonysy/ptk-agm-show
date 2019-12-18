@@ -201,8 +201,8 @@ body{
 /* dept tech */
 .show-6{
   max-width: 250px;
-  transform: rotate(10deg);
-  left: 35%;
+  transform: rotate(-20deg);
+  left: 15%;
   top: 5vh;
   width:100%;
 }
@@ -214,17 +214,31 @@ body{
 }
 
 .show-7{
-  padding:1em;
+  /* padding:1em; */
   left:40%;
   top:5vh;
-  background:#d0c3aa;
-  border-radius: 12px;
+  background:url("./imgs/tech-interface.svg");
+  background-repeat: no-repeat;
+  width:50vw;
   /* box-shadow: 1px 3px 4px 1px rgba(0,0,0,0.3); */
 }
 
+.show-7::before{
+  content:'';
+  padding-top: 56.29%;
+  top:0;
+  display: block;
+  left:0;
+}
+
 .code-wrapper{
-  overflow-y: scroll;
-  max-height: 400px;
+  position: absolute;
+  top: 10%;
+  color: #20bb6f;
+  left: 5%;   
+  line-height: 1.4;
+  font-size: 18px;
+  width:700px;
 }
 
 /* marketing and sales center */

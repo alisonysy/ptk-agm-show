@@ -94,14 +94,37 @@ import CreateBubbles from './vendor/explode.js';
 
   function deptTech(){
     let tl = gsap.timeline();
+    let codeWrapper = document.querySelector('.code-wrapper pre');
+    let intervalId ;
+    let code = ` 
+import { getRawPath, cacheRawPathMeasurements, getPositionOnPath } from "./utils/paths
+.js";
+import { getGlobalMatrix } from "./utils/matrix.js";
+var _xProps = ["x", "translateX", "left", "marginLeft"],
+    _yProps = ["y", "translateY", "top", "marginTop"],
+    _DEG2RAD = Math.PI / 180,
+    gsap,
+    PropTween,
+    _getUnit,
+    _toArray,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.register
+Plugin && gsap;
+},
+    `;
+    
     tl
       .from('.show-6',{...conversationDefaults})
-      .to('.show-6',{...conversationDefaults},'+=0.5')
       .from('.show-7',{
         x:'100vw',
         duration:1,
         onComplete:function(){
           ratJoggingTl.pause();
+          let n = 0;
+          intervalId = setInterval(function(){
+            codeWrapper.innerHTML += code.substring(n,n+1);
+            n++;
+          },20)
         }
       })
       .to('.code-wrapper',{scrollTop:253,duration:1})
@@ -110,8 +133,10 @@ import CreateBubbles from './vendor/explode.js';
         duration:1,
         onStart:function(){
           ratJoggingTl.resume();
+          clearInterval(intervalId);
         }
-      })
+      },'+=10')
+      .to('.show-6',{...conversationDefaults},'-=1')
       
     return tl;
   };
@@ -462,7 +487,7 @@ import CreateBubbles from './vendor/explode.js';
     .add(deptRD())
     .add(deptHR())
     .add(deptSupplyChain())
-    .add(deptFinance())
+    .add(deptFinance())  
     .add(deptTech())
     .add(boss())
   ;
