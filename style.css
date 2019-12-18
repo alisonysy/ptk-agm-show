@@ -907,19 +907,19 @@ body{
 }
 
 .new-year-cloud-l{
-  max-width: 200px;
+  width: 200px;
   top:-5vh;
   left:-145%;
 }
 
 .new-year-cloud-m{
-  max-width: 280px;
+  width: 280px;
   top:0;
   left:-113%;
 }
 
 .new-year-cloud-r{
-  max-width: 150px;
+  width: 150px;
   right:90%;
   top:-3vh;
 }

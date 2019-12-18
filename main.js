@@ -397,7 +397,7 @@ import CreateBubbles from './vendor/explode.js';
   function happyNewYear(){
     let tl = gsap.timeline();
     const repeatConfig =  {
-      repeat:30,
+      repeat:120,
       repeatDelay:0,
       yoyo:true,
       ease:'none'
