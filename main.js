@@ -29,7 +29,6 @@ import CreateBubbles from './vendor/explode.js';
   }
   
   function ratJogging(){
-    let timer=0;
     let tl = gsap.timeline({
       repeat:999,
       repeatDelay:0.1
@@ -399,11 +398,11 @@ Plugin && gsap;
       .from('.show-24',{...conversationDefaults})
       .from('.show-25',{
         ...slideInDefaults,
-        onComplete:function(){
+        onStart:function(){
           b.bubble();
         }
       })
-      .to('.show-25',{...slideOutDefaults,duration:0.6},'+=2.3')
+      .to('.show-25',{...slideOutDefaults,duration:0.6},'+=2.8')
       .to('.show-24',{
         ...conversationDefaults,
         duration:0.6,
@@ -413,6 +412,9 @@ Plugin && gsap;
           let runningRat = document.querySelector('.running-rat');
           runningRat.style.transition = 'all .6s';
           runningRat.style.opacity = 0;
+          let controlPanel = document.querySelector('.btn-wrapper');
+          controlPanel.style.transition = 'all .6s';
+          controlPanel.style.opacity = 0;
           happyNewYear().play();
         }
       },'-=0.6')
@@ -473,6 +475,21 @@ Plugin && gsap;
       .to('.floor',{scale:0,duration:0.5},'-=1')
     return tl;
   };
+
+  function controlPanel(){
+    let play = document.getElementById('playBtn'),
+        pause = document.getElementById('pauseBtn');
+    pause.addEventListener('click',function(){
+      backgroundTl.pause();
+      ratTl.pause();
+    });
+    play.addEventListener('click',function(){
+      backgroundTl.resume();
+      ratTl.resume();
+    });
+  };
+
+  controlPanel();
 
   ratTl
     .add(ratJoggingTl)

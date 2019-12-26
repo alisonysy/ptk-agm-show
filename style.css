@@ -951,3 +951,48 @@ body{
   left:-150%;
   transform-origin: top;
 }
+
+.btn-wrapper{
+  top:2em;
+  left:2em;
+}
+
+#playBtn,#pauseBtn{
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  background-color: #9b2a1b;
+  position: relative;
+  outline: none;
+  border:none;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+#playBtn::after{
+  content: '';
+  border: 20px solid transparent;
+  border-left: 20px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+#pauseBtn::before, #pauseBtn::after{
+  content:'';
+  height:25px;
+  width:5px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#pauseBtn::before{
+  left: 40%;
+}
+
+#pauseBtn::after{
+  left:60%;
+}
