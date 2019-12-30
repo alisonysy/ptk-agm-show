@@ -43,6 +43,11 @@ body{
   left:20%;
 }
 
+.name{
+  color:#fff;
+  font-weight: 800;
+}
+
 .rat-item{
   max-width:40vh;
   height:auto;
@@ -129,6 +134,14 @@ body{
   left: 10%;
   top: 5vh;
   width:100%;
+}
+
+.dept-3{
+  top:0%;
+  left:50%;
+  font-size: 5em;
+  font-weight: 800;
+  color:#9b2a1b;
 }
 
 .conversation-2{
@@ -995,4 +1008,29 @@ body{
 
 #pauseBtn::after{
   left:60%;
+}
+
+/* names clutter */
+.names-clutter{
+  /* opacity: 0; */
+}
+.names-clutter-all{
+  width:100vw;
+  height:100vh;
+  display: inline;
+  top:0;
+  left:0;
+}
+.names-clutter-zero{
+  width:50vw;
+  height:100vh;
+  display: inline;
+  left:5%;
+}
+
+.names-clutter-one{
+  width:50vw;
+  height:100vh;
+  right:-40%;
+  display: inline;
 }

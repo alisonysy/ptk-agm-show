@@ -26,7 +26,106 @@ import CreateBubbles from './vendor/explode.js';
     onStart:function(){
       ratJoggingTl.resume();
     }
-  }
+  };
+  const nameList = [
+    ['James',60],
+    ['Ashley',50],
+    ['仇森',50],
+    ['Lambert',50],
+    ['Roy',50],
+    ['Jenny',42],
+    ['帅洋康',42],
+    ['Fannie',42],
+    ['甘志鹏',42],
+    ['Rebecca',42],
+    ['kerry',42],
+    ['Lisa',42],
+    ['Lily',42],
+    ['蒋家益',42],
+    ['余涛',40],
+    ['Nicole',40],
+    ['郑宇',40],
+    ['赵云洪',40],
+    ['Cherry',40],
+    ['Petty',40],
+    ['Dane',40],
+    ['Leo',40],
+    ['郑卫伟',38],
+    ['郑慧梅',38],
+    ['Kimi',38],
+    ['Emily',38],
+    ['Lucky',38],
+    ['Gavin',38],
+    ['李辉朋',38],
+    ['Yoyo',38],
+    ['李健彰',38],
+    ['郑小辉',38],
+    ['罗旺',38],
+    ['Jennifer',38],
+    ['Eva',38],
+    ['Tom',38],
+    ['Emma',38],
+    ['Vincent',38],
+    ['Lionel',38],
+    ['Kylin',38],
+    ['梁细叶',35],
+    ['黎红英',35],
+    ['唐文峰',35],
+    ['Roger',35],
+    ['胡冠',35],
+    ['Cary',35],
+    ['Nora',35],
+    ['Summer',35],
+    ['李延辉',35],
+    ['Alison',35],
+    ['曾军平',35],
+    ['李鑫',35],
+    ['Jack',35],
+    ['Mindy',35],
+    ['Alan',42],
+    ['Bruce',35],
+    ['Braw',35],
+    ['韦坤玲',35],
+    ['Jessie',35],
+    ['Nancy',35],
+    ['康柳然',35],
+    ['张周星',35],
+    ['Jacky',35],
+    ['Hunter',35],
+    ['Ruth',35],
+    ['Mandy',35],
+    ['Harry',35],
+    ['Yain',35],
+    ['Yulei',35],
+    ['Abby',35],
+    ['Serena',35],
+    ['Olivia',35],
+    ['Beryl',35],
+    ['Clio',35],
+    ['Sean',35],
+    ['Echo',35],
+    ['Mina',35],
+    ['Stefan',35],
+    ['Claire',35],
+    ['Anna',35],
+    ['Ray',35],
+    ['Jane',35],
+    ['李威',35],
+    ['Richard',35],
+    ['Sky',40],
+    ['陈美娴',35],
+    ['宁亚琴',35],
+    ['Mark',35],
+    ['Tracy',35],
+    ['古明政',35],
+    ['Bruno',35],
+    ['Sunny',40],
+    ['付新羽',35],
+    ['田思',35],
+    ['Terry',35],
+  ];
+
+  let ifCompleted = false, waitForBossSec = false;
   
   function ratJogging(){
     let tl = gsap.timeline({
@@ -83,8 +182,9 @@ import CreateBubbles from './vendor/explode.js';
       .to('.show-4-design',{...conversationDefaults,duration:0.5},'+=0.8')
       .from(['.show-4-girl','.show-4-bg','.show-4-ins'],{...conversationDefaults,stagger:0.3},'-=0.5')
       .from('.show-4-like',{...conversationDefaults,stagger:0.5},'-=0.4')
-      .to('.show-4',{...slideOutDefaults},'+=1')
-      .to('.show-3',{
+      .from('.dept-3',{...conversationDefaults},'+=3')
+      .to('.show-4',{...slideOutDefaults},'+=2')
+      .to(['.show-3','.dept-3'],{
         ...conversationDefaults,
         duration:0.5
       },'-=1')
@@ -415,7 +515,7 @@ Plugin && gsap;
           let controlPanel = document.querySelector('.btn-wrapper');
           controlPanel.style.transition = 'all .6s';
           controlPanel.style.opacity = 0;
-          happyNewYear().play();
+          namesClutter().play();
         }
       },'-=0.6')
     return tl;
@@ -476,6 +576,116 @@ Plugin && gsap;
     return tl;
   };
 
+  function namesClutter(){
+    generateWordCloud();
+    let tl = gsap.timeline();
+    function checkIfCompleted(){
+      if(ifCompleted){
+        tl
+          .resume()
+          .to('.floor',{scale:0,duration:1},'-=0.3')
+          .set('.names-clutter-all',{opacity:1})
+          .set('.names-clutter-all .wordItem',{opacity:0})
+          .to(['.names-clutter-all .wordItem'],{
+            opacity:1,
+            ease:'power3.out',
+            stagger:0.05,
+          })
+          .to('.names-clutter-all .wordItem',{
+            x:function(){
+              return gsap.utils.random(-300,300)
+            },
+            y:function(){
+              return gsap.utils.random(-200,200)
+            },
+            ease:'power4.in',duration:2
+          })
+          .to('.names-clutter-all',{opacity:0,duration:0.4})
+          .to('.names-clutter-all .wordItem',{scale:0,duration:0.4},'-=0.4')
+          .to(['.names-clutter-zero','.names-clutter-one'],{opacity:1,duration:0.5,ease:'power3.in'},'-=0.5')
+          .from(['.names-clutter-zero .wordItem','.names-clutter-one .wordItem'],{scale:1.5,ease:'bounce.out',duration:0.5},'-=0.3')
+        window.cancelAnimationFrame(animTimer);
+        return;
+      }else{
+        tl
+          .set('.names-clutter',{opacity:0})
+          .pause();
+      }
+      animTimer = window.requestAnimationFrame(checkIfCompleted);
+    }
+    let animTimer = window.requestAnimationFrame(checkIfCompleted);
+    return tl;
+  };
+
+  function generateWordCloud(){
+    let allNames = document.getElementsByClassName('names-clutter');
+    for(let n=0; n<allNames.length;n++){
+      allNames[n].style.opacity = 0;
+    }
+    WordCloud(document.getElementById('word-cloud-all'),{
+      list:nameList,
+      color:function(word,weight,fontSize,distance,theta){
+        return gsap.utils.random(["#FAC057", "#EE5A91", "#4b3d3f"]);
+      },
+      classes:'wordItem',
+      rotateRatio:0.75,
+      shape:'square',
+      ellipticity:0.7,
+      gridSize:28
+    });
+    WordCloud(document.getElementById('word-cloud-zero'), { 
+      list: nameList.slice(0,Math.floor(nameList.length/2)),
+      color:function(word, weight, fontSize, distance, theta){
+        return gsap.utils.random(["#FAC057", "#EE5A91", "#4b3d3f"]);
+      },
+      classes:'wordItem',
+      rotateRatio:0,
+      shape:'circle',
+      ellipticity:1.5
+    });
+    WordCloud(document.getElementById('word-cloud-one'),{
+      list:nameList.slice(Math.floor(nameList.length/2)),
+      color:function(){
+        return gsap.utils.random(["#FAC057", "#EE5A91", "#4b3d3f"]);
+      },
+      classes:'wordItem',
+      rotateRatio:0,
+      shape:'square',
+      ellipticity:3
+    });
+    let allCloud = generateMutationObserver('word-cloud-all',nameList.length);
+    allCloud.observe();
+  };
+
+  function generateMutationObserver(id,limit){
+    const targetNode = document.getElementById(id);
+    
+    const config = { attributes: false, childList: true, subtree: true };
+    let n = 0;
+
+    const callback = function(mutationsList, observer) {
+      n++;
+      if(limit && n===limit){
+        for(let mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                ifCompleted = true;
+            }
+        }
+      }
+    };
+
+    const observer = new MutationObserver(callback);
+
+    return {
+      observe:function(){
+        observer.observe(targetNode,config);
+      },
+      disconnect:observer.disconnect,
+      target:targetNode,
+      config:config
+    }
+  }
+
   function controlPanel(){
     let play = document.getElementById('playBtn'),
         pause = document.getElementById('pauseBtn');
@@ -507,5 +717,6 @@ Plugin && gsap;
     .add(deptFinance())  
     .add(deptTech())
     .add(boss())
+    // .add(namesClutter())
   ;
 }()
