@@ -227,6 +227,7 @@ Plugin && gsap;
         }
       })
       // .to('.code-wrapper',{scrollTop:253,duration:1})
+      .from('.dept-4',{...conversationDefaults},'+=8')
       .to('.show-7',{
         x:'-100vw',
         duration:1,
@@ -234,8 +235,8 @@ Plugin && gsap;
           ratJoggingTl.resume();
           clearInterval(intervalId);
         }
-      },'+=10')
-      .to('.show-6',{...conversationDefaults},'-=1')
+      },'+=2')
+      .to(['.show-6','.dept-4'],{...conversationDefaults},'-=1')
       
     return tl;
   };
@@ -252,8 +253,9 @@ Plugin && gsap;
       .from('.show-8-man',{...conversationDefaults})
       .from('.show-8-balloon',{opacity:0})
       .from('.show-8-circle-left',{...conversationDefaults},'-=0.3')
+      .from('.dept-5',{...conversationDefaults},'+=3')
       .to('.show-8',{...slideOutDefaults},'+=0.8')
-      .to('.show-9',{...conversationDefaults},'-=0.5')
+      .to(['.show-9','.dept-5'],{...conversationDefaults},'-=0.5')
     return tl;
   };
 
@@ -261,7 +263,7 @@ Plugin && gsap;
     let tl = gsap.timeline();
     let tl_gear = gsap.timeline();
 
-    tl_gear.to('.show-10-gear',{rotation:360,repeat:10,repeatDelay:0,duration:2,ease:'none'});
+    tl_gear.to('.show-10-gear',{rotation:360,repeat:20,repeatDelay:0,duration:4,ease:'none'});
 
     tl
       .from('.show-11',{...conversationDefaults})
@@ -276,8 +278,9 @@ Plugin && gsap;
       .from('.show-10-distributor',{...conversationDefaults,ease:'elastic.out'},'gear+=3.6')
       .from('.show-10-sp',{...conversationDefaults},'gear+=3.6')
       .from('.show-10-dialog',{...conversationDefaults,duration:0.5},'gear+=4.2')
-      .to('.show-10',{...slideOutDefaults},'gear+=5.8')
-      .to('.show-11',{...conversationDefaults,duration:0.6},'gear+=5.8')
+      .from('.dept-6',{...conversationDefaults},"gear+=6.8")
+      .to('.show-10',{...slideOutDefaults},'gear+=7.8')
+      .to(['.show-11','.dept-6'],{...conversationDefaults,duration:0.6},'gear+=7.8')
     return tl;
   };
 
@@ -289,8 +292,9 @@ Plugin && gsap;
       .from('.show-13-girl',{...conversationDefaults},'-=0.8')
       .from(['.show-13-desk','.show-13-plant'],{y:'100vh',duration:0.7,stagger:0.5},'-=0.4')
       .from(['.show-13-call','.show-13-dialog-1','.show-13-dialog-2'],{...conversationDefaults,stagger:0.6})
+      .from('.dept-7',{...conversationDefaults},'+=3')
       .to('.show-13',{...slideOutDefaults},'+=1')
-      .to('.show-12',{...conversationDefaults},'-=1')
+      .to(['.show-12','.dept-7'],{...conversationDefaults},'-=1')
     return tl;
   };
 
@@ -348,8 +352,9 @@ Plugin && gsap;
       .to('.show-15-right-hand',{rotation:15},'-=0.5')
       .from('.show-15-star-5',{scale:0,y:100,ease:'power4.out',duration:0.6},'-=0.5')
       .fromTo('.show-15-badge',{opacity:0,scale:1.5},{scale:1,rotation:15,opacity:1})
+      .from('.dept-8',{...conversationDefaults},'+=3')
       .to('.show-15',{...slideOutDefaults},'+=0.8')
-      .to('.show-14',{...conversationDefaults},'-=1')
+      .to(['.show-14','.dept-8'],{...conversationDefaults},'-=1')
     return tl;
   };
 
@@ -386,8 +391,9 @@ Plugin && gsap;
         stagger:0.3,
         ease:'Power4.out'
       })
+      .from('.dept-9',{...conversationDefaults},'+=3')
       .to('.show-17',{...slideOutDefaults},'+=0.8')
-      .to('.show-16',{...conversationDefaults},'-=1')
+      .to(['.show-16','.dept-9'],{...conversationDefaults},'-=1')
     return tl;
   };
 
@@ -399,8 +405,9 @@ Plugin && gsap;
       .from('.show-19-lady',{x:-250,opacity:0,duration:0.6})
       .from('.show-19-man',{x:250,opacity:0},'-=0.6')
       .from(['.show-19-card-1','.show-19-card-2','.show-19-card-3'],{...conversationDefaults,stagger:0.4})
+      .from('.dept-10',{...conversationDefaults},'+=3')
       .to('.show-19',{...slideOutDefaults},'+=0.8')
-      .to('.show-18',{...conversationDefaults},'-=1')
+      .to(['.show-18','.dept-10'],{...conversationDefaults},'-=1')
     return tl;
   };
 
@@ -429,8 +436,9 @@ Plugin && gsap;
       .to('.show-21-parcel-1',{y:370,ease:'bounce.out',duration:0.6})
       .to(['.show-21-parcel-1'],{x:-150,duration:1.6})
       .to('.show-21-truck',{x:-1100,duration:1.6},'-=1.6')
+      .from('.dept-11',{...conversationDefaults},'+=3')
       .to('.show-21',{...slideOutDefaults,duration:0.7},'+=1')
-      .to('.show-20',{...conversationDefaults,duration:0.7},'-=0.7')
+      .to(['.show-20','.dept-11'],{...conversationDefaults,duration:0.7},'-=0.7')
     return tl;
   };
 
@@ -479,8 +487,9 @@ Plugin && gsap;
       .to('.show-23-cash',{opacity:0})
       .from('.show-23-coins-1',{opacity:0,x:600,duration:0.6})
       .from('.show-23-coins-2',{opacity:0,x:-600,duration:0.6},'-=0.6')
+      .from('.dept-12',{...conversationDefaults},'+=3')
       .to('.show-23',{...slideOutDefaults,duration:0.7},'+=0.8')
-      .to('.show-22',{...conversationDefaults,duration:0.7},'-=0.7')
+      .to(['.show-22','.dept-12'],{...conversationDefaults,duration:0.7},'-=0.7')
     return tl;
   };
 

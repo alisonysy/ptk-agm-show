@@ -136,7 +136,8 @@ body{
   width:100%;
 }
 
-.dept-3{
+.dept-3, .dept-4, .dept-5, .dept-6, .dept-7, .dept-8, .dept-9,
+.dept-10, .dept-11, .dept-12{
   top:0%;
   left:50%;
   font-size: 5em;
